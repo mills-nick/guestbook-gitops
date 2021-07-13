@@ -17,5 +17,7 @@ images:
 - name: guestbook
   newName: guestbook
   newTag: new
+- name: mills-nick.dkr.ecr.ap-northeast-1.amazonaws.com/adam/user-client
+  newTag: 5cecd28beac302200506609a4565615c4394247c
 - name: mills-nick.dkr.ecr.ap-northeast-1.amazonaws.com/guestbook
   newTag: 26cf857529215c3af89cfa81e973e1c80570781b
