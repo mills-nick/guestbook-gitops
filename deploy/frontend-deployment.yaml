@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: frontend
   annotations:
-    
+
 spec:
   selector:
     matchLabels:
@@ -18,20 +18,20 @@ spec:
         tier: frontend
     spec:
       containers:
-      - name: php-redis
-        image: 457472006214.dkr.ecr.us-west-1.amazonaws.com/guestbook:23d38b9ffa3019fb4e1630af6041364ef52719aa
-        # update image value with the image URI of the container registry  
-        resources:
-          requests:
-            cpu: 100m
-            memory: 100Mi
-        env:
-        - name: GET_HOSTS_FROM
-          value: dns
-          # If your cluster config does not include a dns service, then to
-          # instead access environment variables to find service host
-          # info, comment out the 'value: dns' line above, and uncomment the
-          # line below:
-          # value: env
-        ports:
-        - containerPort: 80
+        - name: php-redis
+          image: 023891380390.dkr.ecr.ap-northeast-1.amazonaws.com/adam/user-client:23d38b9ffa3019fb4e1630af6041364ef52719aa
+          # update image value with the image URI of the container registry
+          resources:
+            requests:
+              cpu: 100m
+              memory: 100Mi
+          env:
+            - name: GET_HOSTS_FROM
+              value: dns
+              # If your cluster config does not include a dns service, then to
+              # instead access environment variables to find service host
+              # info, comment out the 'value: dns' line above, and uncomment the
+              # line below:
+              # value: env
+          ports:
+            - containerPort: 80
