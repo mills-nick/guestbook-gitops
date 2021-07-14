@@ -1,25 +1,25 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-- frontend-deployment.yaml
-- frontend-service.yaml
-- redis-master-deployment.yaml
-- redis-master-service.yaml
-- redis-slave-deployment.yaml
-- redis-slave-service.yaml
+  - frontend-deployment.yaml
+  # - frontend-service.yaml
+  - redis-master-deployment.yaml
+  - redis-master-service.yaml
+  - redis-slave-deployment.yaml
+  - redis-slave-service.yaml
 
 images:
-- name: 023891380390.dkr.ecr.ap-northeast-1.amazonaws.com/adam/user-client
-  newTag: 02725513314462152d95c38dbbbf1f0583e08d9c
-- name: 457472006214.dkr.ecr.us-west-1.amazonaws.com/guestbook
-  newTag: d6cbdc0df33ef5f5dce803931e4d89031865223b
-- name: frontend
-  newName: guestbook
-  newTag: 3fa38b9d2acb82a6e567c5935d1037a1339e4f1d
-- name: guestbook
-  newName: guestbook
-  newTag: new
-- name: mills-nick.dkr.ecr.ap-northeast-1.amazonaws.com/adam/user-client
-  newTag: 5cecd28beac302200506609a4565615c4394247c
-- name: mills-nick.dkr.ecr.ap-northeast-1.amazonaws.com/guestbook
-  newTag: 26cf857529215c3af89cfa81e973e1c80570781b
+  - name: 023891380390.dkr.ecr.ap-northeast-1.amazonaws.com/adam/user-client
+    newTag: 02725513314462152d95c38dbbbf1f0583e08d9c
+  - name: 457472006214.dkr.ecr.us-west-1.amazonaws.com/guestbook
+    newTag: d6cbdc0df33ef5f5dce803931e4d89031865223b
+  - name: frontend
+    newName: guestbook
+    newTag: 3fa38b9d2acb82a6e567c5935d1037a1339e4f1d
+  - name: guestbook
+    newName: guestbook
+    newTag: new
+  - name: mills-nick.dkr.ecr.ap-northeast-1.amazonaws.com/adam/user-client
+    newTag: 5cecd28beac302200506609a4565615c4394247c
+  - name: mills-nick.dkr.ecr.ap-northeast-1.amazonaws.com/guestbook
+    newTag: 26cf857529215c3af89cfa81e973e1c80570781b
