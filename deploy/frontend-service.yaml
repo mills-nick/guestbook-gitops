@@ -6,7 +6,7 @@ metadata:
     app: guestbook
     tier: frontend
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   # Not supported with fargate
   # type: LoadBalancer
   ports:
