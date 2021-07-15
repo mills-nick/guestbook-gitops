@@ -1,12 +1,12 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  - frontend-deployment.yaml
+  #- frontend-deployment.yaml
   # - frontend-service.yaml
-  - redis-master-deployment.yaml
-  - redis-master-service.yaml
-  - redis-slave-deployment.yaml
-  - redis-slave-service.yaml
+  #- redis-master-deployment.yaml
+  #- redis-master-service.yaml
+  #- redis-slave-deployment.yaml
+  #- redis-slave-service.yaml
 
 images:
   - name: 023891380390.dkr.ecr.ap-northeast-1.amazonaws.com/adam/user-client
